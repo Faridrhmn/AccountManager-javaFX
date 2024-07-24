@@ -24,19 +24,6 @@ public class HistoryController {
 
     @FXML
     private void initialize() {
-//        HashMap<String, String> passwordMap = account.getPasswordMap();
-//        ObservableList<PasswordMap> observablePassword = FXCollections.observableArrayList();
-//
-//        for (String i : passwordMap.keySet()) {
-//            observablePassword.add(new PasswordMap(i, passwordMap.get(i)));
-//        }
-//
-//        // Set up the columns in the table
-//        timeChange.setCellValueFactory(cellData -> cellData.getValue().modificationTimeProperty());
-//        password.setCellValueFactory(cellData -> cellData.getValue().passwordProperty());
-//
-//        // Add observable list data to the table
-//        passwordTable.setItems(observablePassword);
     }
 
 
