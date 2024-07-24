@@ -6,16 +6,15 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="285.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="id.dojo.accountmanagerjavafx.HistoryController">
    <children>
       <Label layoutX="14.0" layoutY="14.0" text="Password history" />
-      <TableView layoutX="14.0" layoutY="40.0" prefHeight="200.0" prefWidth="404.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+      <TableView fx:id="passwordTable" layoutX="14.0" layoutY="40.0" prefHeight="200.0" prefWidth="404.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
         <columns>
-          <TableColumn prefWidth="175.0" text="Password" />
-          <TableColumn minWidth="0.0" prefWidth="246.0" text="Time" />
+          <TableColumn fx:id="password" prefWidth="175.0" text="Password" />
+          <TableColumn fx:id="timeChange" minWidth="0.0" prefWidth="246.0" text="Time" />
         </columns>
       </TableView>
-      <Button layoutX="399.0" layoutY="249.0" mnemonicParsing="false" text="OK" />
+      <Button layoutX="399.0" layoutY="249.0" mnemonicParsing="false" onAction="#handleOk" text="OK" />
    </children>
 </AnchorPane>

@@ -92,7 +92,7 @@ public class HomeController {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.initOwner(mainApp.getPrimaryStage());
             alert.setTitle("Not Found!");
-            alert.setHeaderText("Input not found");
+            alert.setHeaderText("Name not found");
             alert.setContentText("Please input another name");
 
             alert.showAndWait();
@@ -138,7 +138,6 @@ public class HomeController {
                 ioe.printStackTrace();
             }
         } else {
-            // Nothing selected.
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.initOwner(mainApp.getPrimaryStage());
             alert.setTitle("No Selection");
@@ -220,6 +219,7 @@ public class HomeController {
 
         List<AccountRead> personDataList = accounts.stream()
                 .map(Account::toAccountData)
+//                .map(Account::toAccountDataWithTime)
                 .collect(Collectors.toList());
 
         try (FileOutputStream fileOutputStream = new FileOutputStream(getFileLocation());
@@ -245,7 +245,6 @@ public class HomeController {
     }
 
     public void updateAccount(Account account) {
-        // Refresh the TableView
         accountTable.refresh();
     }
 
@@ -309,7 +308,8 @@ public class HomeController {
         }
 
         List<AccountRead> accountDataList = accounts.stream()
-                .map(Account::toAccountData)
+//                .map(Account::toAccountData)
+                .map(Account::toAccountDataWithTime)
                 .collect(Collectors.toList());
 
         try (FileOutputStream fileOutputStream = new FileOutputStream(file);

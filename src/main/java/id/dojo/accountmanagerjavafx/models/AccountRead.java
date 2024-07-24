@@ -1,6 +1,7 @@
 package id.dojo.accountmanagerjavafx.models;
 
 import java.io.Serializable;
+import java.util.HashMap;
 
 public class AccountRead implements Serializable {
     private static final long serialVersionUID = 1L;
@@ -8,6 +9,7 @@ public class AccountRead implements Serializable {
     private String signinUrl;
     private String username;
     private String password;
+    private HashMap<String, String> passwordMap;
 
     public AccountRead(){}
 
@@ -16,6 +18,14 @@ public class AccountRead implements Serializable {
         this.signinUrl = signinUrl;
         this.username = username;
         this.password = password;
+    }
+
+    public AccountRead(String accountName, String signinUrl, String username, String password, HashMap<String, String> passwordMap){
+        this.accountName = accountName;
+        this.signinUrl = signinUrl;
+        this.username = username;
+        this.password = password;
+        this.passwordMap = passwordMap;
     }
 
     public String getAccountName() {
@@ -48,6 +58,14 @@ public class AccountRead implements Serializable {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public HashMap<String, String> getPasswordMap() {
+        return passwordMap;
+    }
+
+    public void setPasswordMap(HashMap<String, String> passwordMap) {
+        this.passwordMap = passwordMap;
     }
 
 }

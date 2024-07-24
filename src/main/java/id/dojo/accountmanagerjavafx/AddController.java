@@ -6,6 +6,11 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
+
 public class AddController {
     @FXML
     private TextField name;
@@ -33,14 +38,6 @@ public class AddController {
         dialogStage.close();
     }
 
-    public void setAccount(Account account) {
-        this.account = account;
-        name.setText(account.getAccountName());
-        url.setText(account.getSiginUrl());
-        username.setText(account.getUsername());
-        password.setText(account.getPassword());
-    }
-
     public void setHomeController(HomeController homeController) {
         this.homeController = homeController;
     }
@@ -48,7 +45,13 @@ public class AddController {
     @FXML
     private void handleOk() {
         if (isInputValid()) {
-            Account account = new Account(name.getText(), url.getText(), username.getText(), password.getText());
+            HashMap<String, String> passwordMap = new HashMap<>();
+            String pattern = "MM/dd/yyyy HH:mm:ss";
+            DateFormat df = new SimpleDateFormat(pattern);
+            Date waktu = new Date();
+            String waktuUbah = df.format(waktu);
+            passwordMap.put(waktuUbah, password.getText());
+            Account account = new Account(name.getText(), url.getText(), username.getText(), password.getText(), passwordMap);
             homeController.addAccount(account);
             dialogStage.close();
         }

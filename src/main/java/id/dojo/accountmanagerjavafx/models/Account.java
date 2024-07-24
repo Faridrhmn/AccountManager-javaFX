@@ -8,11 +8,11 @@ import java.util.HashMap;
 
 public class Account implements Serializable{
 
-    private StringProperty accountName = new SimpleStringProperty();;
-    private StringProperty signinUrl = new SimpleStringProperty();;
-    private StringProperty username = new SimpleStringProperty();;
-    private StringProperty password = new SimpleStringProperty();;
-    private HashMap<String, String> Password = new HashMap<String, String>();
+    private StringProperty accountName = new SimpleStringProperty();
+    private StringProperty signinUrl = new SimpleStringProperty();
+    private StringProperty username = new SimpleStringProperty();
+    private StringProperty password = new SimpleStringProperty();
+    private HashMap<String, String> passwordMap = new HashMap<>();
 
     public Account(){
     }
@@ -22,7 +22,14 @@ public class Account implements Serializable{
         this.signinUrl = new SimpleStringProperty(signinUrl);
         this.username = new SimpleStringProperty(username);
         this.password = new SimpleStringProperty(password);
-//        this.Password = Password;
+    }
+
+    public Account(String accountName, String signinUrl, String username, String password, HashMap<String, String> passwordMap ){
+        this.accountName = new SimpleStringProperty(accountName);
+        this.signinUrl = new SimpleStringProperty(signinUrl);
+        this.username = new SimpleStringProperty(username);
+        this.password = new SimpleStringProperty(password);
+        this.passwordMap = passwordMap;
     }
 
     // NAME
@@ -82,9 +89,13 @@ public class Account implements Serializable{
 
     // PASSWORD HASHMAP
 
-    public void setPasswordAll(String password, HashMap<String, String> Password){
-        this.password = new SimpleStringProperty(password);
-        this.Password = Password;
+
+    public HashMap<String, String> getPasswordMap() {
+        return passwordMap;
+    }
+
+    public void setPasswordMap(HashMap<String, String> password) {
+        passwordMap = password;
     }
 
     public static Account readFileOpen(AccountRead accountRead){
@@ -93,11 +104,16 @@ public class Account implements Serializable{
         account.setUsername(accountRead.getUsername());
         account.setSigninUrl(accountRead.getSigninUrl());
         account.setPassword(accountRead.getPassword());
+        account.setPasswordMap(accountRead.getPasswordMap());
         return account;
     }
 
     public AccountRead toAccountData() {
         return new AccountRead(getAccountName(), getSiginUrl(), getUsername(), getPassword());
+    }
+
+    public AccountRead toAccountDataWithTime() {
+        return new AccountRead(getAccountName(), getSiginUrl(), getUsername(), getPassword(), getPasswordMap());
     }
 
 }

@@ -99,6 +99,7 @@ public class EditController {
             Parent parent = fxmlLoader.load();
             ChangePassController changePassControllerController = fxmlLoader.getController();
             changePassControllerController.setEditController(this);
+            changePassControllerController.setAccount(account);
             Stage stage = new Stage();
             stage.setScene(new Scene(parent));
             changePassControllerController.setDialogStage(stage);
@@ -115,6 +116,7 @@ public class EditController {
             Parent parent = fxmlLoader.load();
             HistoryController historyController = fxmlLoader.getController();
             historyController.setEditController(this);
+            historyController.setAccount(account);
             Stage stage = new Stage();
             stage.setScene(new Scene(parent));
             historyController.setDialogStage(stage);
@@ -122,5 +124,9 @@ public class EditController {
         } catch (IOException ioe) {
             ioe.printStackTrace();
         }
+    }
+
+    public void updatePassword(String Password){
+        password.setText(Password);
     }
 }
