@@ -6,10 +6,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 
 <AnchorPane prefHeight="230.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="id.dojo.accountmanagerjavafx.AddController">
    <children>
+      <Pane layoutX="-2.0" prefHeight="230.0" prefWidth="400.0" styleClass="background" stylesheets="@css/style.css" />
       <Label layoutX="159.0" layoutY="14.0" text="Add Account" AnchorPane.topAnchor="14.0" />
       <GridPane layoutX="14.0" layoutY="48.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="48.0">
         <columnConstraints>
@@ -33,7 +35,7 @@
             <TextField fx:id="password" layoutX="190.0" layoutY="73.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
          </children>
       </GridPane>
-      <Button layoutX="343.0" layoutY="188.0" mnemonicParsing="false" onAction="#handleOk" text="OK" AnchorPane.bottomAnchor="14.0" />
-      <Button layoutX="271.0" layoutY="188.0" mnemonicParsing="false" onAction="#handleCancel" text="Cancel" AnchorPane.bottomAnchor="14.0" />
+      <Button layoutX="343.0" layoutY="188.0" mnemonicParsing="false" onAction="#handleOk" stylesheets="@css/style.css" text="OK" AnchorPane.bottomAnchor="14.0" />
+      <Button layoutX="278.0" layoutY="194.0" mnemonicParsing="false" onAction="#handleCancel" styleClass="button-delete" stylesheets="@css/style.css" text="Cancel" AnchorPane.bottomAnchor="14.0" />
    </children>
 </AnchorPane>

@@ -10,7 +10,7 @@ public class HomeApplication extends Application{
     private static Stage primaryStage;
     public void start(Stage primaryStage) throws IOException {
         this.primaryStage = primaryStage;
-        FXMLLoader fxmlLoader = new FXMLLoader(HomeApplication.class.getResource("Home-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HomeApplication.class.getResource("Login-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         primaryStage.setTitle("Account Manager");
         primaryStage.setScene(scene);

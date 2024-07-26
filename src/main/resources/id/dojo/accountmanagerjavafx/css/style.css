@@ -1,0 +1,212 @@
+/* styles.css */
+
+.background {
+    -fx-background-color: #DAD3BE;
+}
+
+.menu-bar {
+    -fx-background-color: #B7B597; /* SteelBlue */
+}
+
+.table-view {
+    -fx-base: #ffffff; /* White */
+    -fx-control-inner-background: #ffffff; /* White */
+    -fx-background-color: #ffffff; /* White */
+    -fx-table-cell-border-color: #dcdcdc; /* Gainsboro */
+    -fx-table-header-border-color: #dcdcdc; /* Gainsboro */
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #254336; /* SteelBlue */
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 15;
+    -fx-border-width: 0 0 0 0;
+    -fx-background-color: #6B8A7A; /* SteelBlue */
+    -fx-border-color: transparent transparent #dcdcdc transparent; /* Gainsboro */
+    -fx-border-insets: 0 10 1 0;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 10pt;
+    -fx-text-fill: #ffffff; /* White */
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+}
+
+.text-field {
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+    -fx-background-color: #ffffff; /* White */
+    -fx-prompt-text-fill: gray;
+    -fx-font-size: 10pt;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+.button {
+    -fx-border-color: #dcdcdc; /* Gainsboro */
+    -fx-background-radius: 4px;
+    -fx-background-color: #4682b4; /* SteelBlue */
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 8pt;
+    -fx-text-fill: #ffffff; /* White */
+}
+
+.button:hover {
+    -fx-background-color: #4169e1; /* RoyalBlue */
+}
+
+.button:pressed, .button:default:hover:pressed {
+    -fx-background-color: #ffffff; /* White */
+    -fx-text-fill: #4682b4; /* SteelBlue */
+}
+
+.button:focused {
+    -fx-border-color: #ffffff; /* White */
+    -fx-border-width: 1, 1;
+    -fx-border-style: solid, segments(1, 1);
+    -fx-border-radius: 4px;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+.button:disabled, .button:default:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: #4682b4; /* SteelBlue */
+    -fx-text-fill: #ffffff; /* White */
+}
+
+.button:default {
+    -fx-background-color: #5f9ea0; /* CadetBlue */
+    -fx-text-fill: #ffffff; /* White */
+}
+
+.button:default:hover {
+    -fx-background-color: #7fb3d5; /* LightSteelBlue */
+}
+
+/* button add */
+.button-add {
+    -fx-border-color: #dcdcdc; /* Gainsboro */
+    -fx-background-radius: 4px;
+    -fx-background-color: #32a84a; /* SteelBlue */
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 8pt;
+    -fx-text-fill: #ffffff; /* White */
+}
+
+.button-add:hover {
+    -fx-background-color: #32a84a; /* RoyalBlue */
+}
+
+.button-add:pressed, .button:default:hover:pressed {
+    -fx-background-color: #ffffff; /* White */
+    -fx-text-fill: #32a84a; /* SteelBlue */
+}
+
+.button-add:focused {
+    -fx-border-color: #ffffff; /* White */
+    -fx-border-width: 1, 1;
+    -fx-border-style: solid, segments(1, 1);
+    -fx-border-radius: 4px;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+.button-add:disabled, .button:default:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: #32a84a; /* SteelBlue */
+    -fx-text-fill: #ffffff; /* White */
+}
+
+.button-add:default {
+    -fx-background-color: #32a84a; /* CadetBlue */
+    -fx-text-fill: #ffffff; /* White */
+}
+
+.button-add:default:hover {
+    -fx-background-color: #32a84a; /* LightSteelBlue */
+}
+
+/* button delete */
+.button-delete {
+    -fx-border-color: #dcdcdc; /* Gainsboro */
+    -fx-background-radius: 4px;
+    -fx-background-color: #a83e32; /* SteelBlue */
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 8pt;
+    -fx-text-fill: #ffffff; /* White */
+}
+
+.button-delete:hover {
+    -fx-background-color: #a83e32; /* RoyalBlue */
+}
+
+.button-delete:pressed, .button:default:hover:pressed {
+    -fx-background-color: #ffffff; /* White */
+    -fx-text-fill: #a83e32; /* SteelBlue */
+}
+
+.button-delete:focused {
+    -fx-border-color: #ffffff; /* White */
+    -fx-border-width: 1, 1;
+    -fx-border-style: solid, segments(1, 1);
+    -fx-border-radius: 4px;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+.button-delete:disabled, .button:default:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: #a83e32; /* SteelBlue */
+    -fx-text-fill: #ffffff; /* White */
+}
+
+.button-delete:default {
+    -fx-background-color: #a83e32; /* CadetBlue */
+    -fx-text-fill: #ffffff; /* White */
+}
+
+.button-delete:default:hover {
+    -fx-background-color: #a83e32; /* LightSteelBlue */
+}
+
+/* button edit */
+.button-edit {
+    -fx-border-color: #dcdcdc; /* Gainsboro */
+    -fx-background-radius: 4px;
+    -fx-background-color: #c7a63a; /* SteelBlue */
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 8pt;
+    -fx-text-fill: #ffffff; /* White */
+}
+
+.button-edit:hover {
+    -fx-background-color: #c7a63a; /* RoyalBlue */
+}
+
+.button-edit:pressed, .button:default:hover:pressed {
+    -fx-background-color: #ffffff; /* White */
+    -fx-text-fill: #c7a63a; /* SteelBlue */
+}
+
+.button-edit:focused {
+    -fx-border-color: #ffffff; /* White */
+    -fx-border-width: 1, 1;
+    -fx-border-style: solid, segments(1, 1);
+    -fx-border-radius: 4px;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+.button-edit:disabled, .button:default:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: #c7a63a; /* SteelBlue */
+    -fx-text-fill: #ffffff; /* White */
+}
+
+.button-edit:default {
+    -fx-background-color: #c7a63a; /* CadetBlue */
+    -fx-text-fill: #ffffff; /* White */
+}
+
+.button-edit:default:hover {
+    -fx-background-color: #c7a63a; /* LightSteelBlue */
+}

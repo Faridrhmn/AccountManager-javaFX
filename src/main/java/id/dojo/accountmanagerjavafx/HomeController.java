@@ -218,7 +218,6 @@ public class HomeController {
         }
 
         List<AccountRead> personDataList = accounts.stream()
-//                .map(Account::toAccountData)
                 .map(Account::toAccountDataWithTime)
                 .collect(Collectors.toList());
 
@@ -308,7 +307,6 @@ public class HomeController {
         }
 
         List<AccountRead> accountDataList = accounts.stream()
-//                .map(Account::toAccountData)
                 .map(Account::toAccountDataWithTime)
                 .collect(Collectors.toList());
 
