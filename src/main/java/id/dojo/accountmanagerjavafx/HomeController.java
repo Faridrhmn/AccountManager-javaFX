@@ -266,21 +266,6 @@ public class HomeController {
         return new String(chiper);
     }
 
-    public static String dekripVignere(String ciphertext, String key) {
-        String alpha = "abcdefghijklmnopqrstuvwxyz";
-        int keyIndex = 0;
-        char plain[] = new char[ciphertext.length()];
-        for (int i = 0; i < ciphertext.length(); i++) {
-            char charCipher = ciphertext.charAt(i);
-            char keyChar = key.charAt(keyIndex % key.length());
-            int newCharIndex = (alpha.indexOf(charCipher) - alpha.indexOf(keyChar) + alpha.length()) % alpha.length();
-            char newChar = alpha.charAt(newCharIndex);
-            plain[i] += newChar;
-            keyIndex++;
-        }
-        return new String(plain);
-    }
-
     @FXML
     private void handleSaveAs() {
         FileChooser fileChooser = new FileChooser();

@@ -108,10 +108,6 @@ public class Account implements Serializable{
         return account;
     }
 
-    public AccountRead toAccountData() {
-        return new AccountRead(getAccountName(), getSiginUrl(), getUsername(), getPassword());
-    }
-
     public AccountRead toAccountDataWithTime() {
         return new AccountRead(getAccountName(), getSiginUrl(), getUsername(), getPassword(), getPasswordMap());
     }
